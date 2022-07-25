@@ -15,6 +15,10 @@ Arturo B. Martín
 
     This project has a register formulary and a login formulary, both of them properly validated before and after being sent.
 
+- ### User list
+
+    A table displaying the data of all the users registered into the database. Only logged in users are allowed to visit this page.
+
 - ### Redirects
 
     If the user logs in successfully, he will then be redirected to a 'successful login' page and automatically redirected to the 'user list'.
