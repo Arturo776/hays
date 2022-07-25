@@ -1,0 +1,4 @@
+# RewriteEngine On
+SetEnv BASE_PATH "/hays"
+
+ErrorDocument 404 /%{ENV:BASE_PATH}/404.php

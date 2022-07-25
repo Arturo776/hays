@@ -1,0 +1,272 @@
+/* General */
+body {
+    font-family: arial, verdana, sans-serif;
+    padding: 0 5em;
+    min-height: 90vh;
+    /* Center body content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+body > .body-wrapper {
+    padding: 1em 5em;
+    margin: auto 0;
+}
+/* Header */
+.title-container {
+    padding: 0;
+}
+.title-container > h1 {
+    font-size: 58px;
+    color: inherit;
+}
+/* Aside */
+aside {
+    /* Set alert position. */
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+aside > .alert {
+    font-size: 14px;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    color: white;
+    /* Set display to inline-block to fit the content size. */
+    display: inline-block;
+    /* Set opacity's transition duration to 0.1s. 
+    This value will be changed with JS within the HTML tag. */
+    transition: opacity 0.1s;
+}
+aside > .database-enabled-1 {
+    background-color: green;
+}
+aside > .database-enabled-0 {
+    background-color: red;
+}
+/* Formulary */
+form > section {
+    padding: 0.5em 0;
+}
+form > .input-group {
+    display: flex;
+    flex-direction: column;
+}
+form > .input-group > label {
+    margin-bottom: 0.5em;
+}
+form > .input-group > input {
+    padding: 0.5em;
+    width: 200px;
+}
+form > .input-group > .input-error {
+    border: 1px solid red;
+    background-color: #FFDDDD;
+}
+form > .redirect {
+    width: 215px;
+    text-align: center;
+}
+form > .redirect > a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: coral;
+    border-bottom: 3px solid coral;
+}
+form > .form-banner, form > .button-group {
+    background-color: green;
+    border-radius: 10px;
+    width: 215px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.1em 0;
+    margin: 1.5em 0 1em 0;
+}
+form > .button-group {
+    background-color: coral;
+}
+form > .button-group > button {
+    background-color: coral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 16px;
+    transition: 0.1s;
+}
+form > .hidden {
+    display: none;
+}
+/* Title container */
+.container {
+    position: relative;
+    padding: 0 5em;
+    width: 100px;
+    height: 100%;
+    margin: auto 0;
+    z-index: 1;
+}
+.container > h1 {
+    font-size: 86px;
+    color: lightcoral;
+    line-height: 1.2;
+}
+/* Background */
+.circle {
+    position: fixed;
+    border-radius: 50%;
+    z-index: 0;
+}
+.circle-right {
+    left: 60%;
+    top: 10%;
+    width: 1500px;
+    height: 1500px;
+}
+.circle-left {
+    left: -10%;
+    top: -15%;
+    width: 500px;
+    height: 500px;
+}
+.light-coral {
+    background-color: #ff9f70;
+}
+.light-blue {
+    background-color: lightblue;
+}
+/* User list */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+} 
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.logout-container {
+    padding: 2em 0;
+}
+.logout-container > a {
+    text-decoration: none;
+    color: coral;
+    border: 2px solid white;
+    border-bottom: 2px solid coral;
+    padding: 1em;
+    transition: 0.15s;
+}
+.logout-container > a:hover {
+    background: coral;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+@media(max-width: 800px) {
+    /* General */
+    body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    body > .body-wrapper {
+        padding: 0;
+        margin: 0;
+    }
+    main {
+        padding: 0;
+        margin: 0;
+    }
+    /* Header */
+    header {
+        padding: 1em 0;
+        margin: 0;
+    }
+    /* Aside */
+    aside {
+        position: fixed;
+        left: 30px;
+        top: 20px;
+    }
+    /* Formulary */
+    form > section {
+        padding: 1em 0;
+    }
+    form > .input-group {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.25em;
+    }
+    form > .input-group > label {
+        margin-bottom: 0.5em;
+    }
+    form > .input-group > input {
+        margin: 0 auto;
+        padding: 0.5em;
+    }
+    form > .button-group {
+        margin: 0 auto;
+        text-align: center;
+    }
+    form > .form-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em auto 0.5em auto;
+    }
+    form > .redirect {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    /* Title container */
+    .container {
+        position: relative;
+        text-align: start;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 2em;
+        z-index: 1;
+    }
+    .container > h1 {
+        color: lightcoral;
+        line-height: 1.2;
+        font-size: 58px;
+    }
+    /* User list */
+    table {
+        text-align: start;
+    }
+    table thead {
+        display: none;
+    }
+    table td {
+       display: flex;
+    }  
+    table td::before {
+      content: attr(label);
+      font-weight: bold;
+      width: 20px;
+      min-width: 20px;
+    }
+    /* Logout */
+    .logout-container {
+        padding: 2em 0;
+    }
+    .logout-container > a {
+        text-decoration: none;
+        color: coral;
+        border: 2px solid white;
+        border-bottom: 2px solid coral;
+        padding: 1em;
+        transition: 0.15s;
+    }
+    .logout-container > a:hover {
+        background: coral;
+        color: white;
+        border-bottom: 2px solid white;
+    }
+}
